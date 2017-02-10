@@ -18,7 +18,7 @@ def login():
     if request.method == 'POST':
         if request.form['username'] != 'admin' or \
                 request.form['password'] != 'secret':
-            error = 'Invalid credentials'
+            flash('Invalid credentials', 'error')
         else:
             flash('You were successfully logged in')
             return redirect(url_for('index'))
