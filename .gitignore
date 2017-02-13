@@ -4,3 +4,5 @@ venv/include/
 venv/local/
 pip-selfcheck.json
 *.pyc
+*.egg-info
+*.db
