@@ -74,7 +74,7 @@ def add_entry():
     return redirect(url_for('show_entries'))
 
 
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/login/', methods=['GET', 'POST'])
 def login():
     error = None
     if request.method == 'POST':
@@ -89,7 +89,7 @@ def login():
     return render_template('login.html', error=error)
 
 
-@app.route('logout')
+@app.route('/logout')
 def logout():
     session.pop('logged_in', None)
     flash('You were logged out')
